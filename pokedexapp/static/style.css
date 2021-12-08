@@ -1,0 +1,260 @@
+
+/* 
+    CHARTE GRAPHIQUE
+    jaune = #f6c301
+    bleu =  #3b5ba6
+*/
+
+html {
+    font-family: 'Spinnaker', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* PAGE DE GARDE */
+
+.logo_box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pokedex_logo {
+    background-image: url('img/pokedex_logo_bw.png');
+    height: 200px;
+    width: 750px;
+    background-size: 100%;
+}
+
+#pokedex_logo:hover {
+    animation: heart-pulse 0.35s ease-out alternate;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes heart-pulse {
+    0% {transform: scale(1, 1);}
+    100% {transform: scale(1.08, 1.08);}
+}
+
+
+/* HOME */
+
+nav {
+    justify-content: space-around;
+    height: 70px;
+    position: sticky;
+    background-color: #3b5ba6;
+}
+
+nav .pokedex_logo_home {
+    align-items: center;
+}
+
+nav .pokedex_logo_home img {
+    height: 70px;
+}
+
+.filters {
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.filters .search_box p {
+    color: #000;
+    font-size: 11px;
+    margin-right: auto;
+}
+
+.filters .search_box .search {
+    gap: 10px;
+}
+
+.filters .search_box .search input {
+    height: 15px;
+    align-self: center;
+}
+
+.filters .search_box .search a img {
+    height: 25px;
+    padding: 2px;
+    opacity: 0.6;
+}
+
+.filters .search_box .search a img:hover {
+    opacity: 1;
+}
+
+.grid_container {
+    width: 70%;
+    margin: 0 auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 40px 20px;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.grid_item {
+    height: 230px;
+    width: auto;
+    justify-self: center;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #b1b1b1;
+}
+
+.grid_item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.grid_item img {
+    height: 200px;
+}
+
+.grid_item p {
+    margin: 0;
+    text-align: center;
+}
+
+
+/* Modal */
+
+#modal {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    text-align: -webkit-center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background: #b6b6b6bf;
+}
+  
+@keyframes appear {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.modal_paginate {
+    position: relative;
+    width: 57%;
+    max-width: 90%;
+    margin: 11% 0 0;
+    border-radius: 10px;
+    background: #f2f2f2;
+    box-shadow: 0px 0px 20px #a5a5a5;
+    animation: appear 350ms ease-in 1;
+}
+
+.modal_paginate .paginate_previous, 
+.modal_paginate .paginate_next {
+    align-self: center;
+}
+
+.modal_paginate .paginate_previous img, 
+.modal_paginate .paginate_next img {
+    height: 30px;
+}
+
+.modal_content .modal_header {
+    justify-content: right;
+    padding-top: 20px;
+}
+
+.modal_content .modal_header .justify_box {
+    width: 50px;
+}
+
+.modal_content .modal_header .modal_header_text {
+    width: 58%;
+    justify-content: space-between;
+    cursor: default;
+}
+
+.modal_content .modal_header h2 {
+    margin: 0;
+}
+
+.modal_content .modal_header .pokemon_name span {
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.modal_content .modal_header .pokemon_name,
+.modal_content .modal_header .pokemon_type {
+    gap: 10px;
+    align-items: center;
+}
+
+.modal_content .modal_header .pokemon_type span {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+.modal_content .modal_header .pokemon_type #eau {
+    background-color: #4592c4;
+}
+
+.modal_content .modal_header .pokemon_type #eau:hover {
+    background-color: #3b7aa3;
+}
+  
+.modal_content .modal_header .modal_close {
+    float: right;
+    height: 15px;
+    width: 15px;
+    margin: -6px -13px 10px 15px;
+    background-image: url(../img/close.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.modal_content img {
+    position: absolute;
+    height: 290px;
+    top: -60px;
+    left: 0;
+}
+
+.modal_content .modal_text {
+    cursor: default;
+}
+
+.modal_content .modal_text .text_1 {
+    padding: 20px 30px 20px 260px;
+    text-align: left;
+}
+
+.modal_content .modal_text .text_2 {
+    padding: 25px 30px 35px;
+    text-align: left;
+}
