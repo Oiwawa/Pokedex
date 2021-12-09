@@ -11,6 +11,7 @@ html {
 
 body {
     margin: 0;
+    background-image: url('img/pokeball_paper.png');
 }
 
 .flex {
@@ -42,6 +43,7 @@ body.modal-open {
 }
 
 #pokedex_logo:hover {
+    background-image: url('img/pokedex_logo.png');
     animation: heart-pulse 0.35s ease-out alternate;
     animation-iteration-count: infinite;
     cursor: pointer;
@@ -232,7 +234,7 @@ nav .pokedex_logo_home img {
     height: 15px;
     width: 15px;
     margin: -6px -13px 10px 15px;
-    background-image: url(../img/close.png);
+    background-image: url(/pokedexapp/static/img/close.png);
     background-size: 15px;
     background-repeat: no-repeat;
     cursor: pointer;

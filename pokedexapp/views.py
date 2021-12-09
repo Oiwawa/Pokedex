@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http.response import HttpResponse
 import requests, os
 
+from pokedexapp.models import Pokemon
+
 def index(request):
     return render(request, "index.html")
 
@@ -11,13 +13,17 @@ def listPokemon(request):
     result = result["results"]
 
     list1 = []
+    listIndex = []
     index = 0
-    for name in result:
-        list1.append(result[index]['name'])
+    for i in result:
+        pokemon = i['name']
+        list1.append(pokemon)
+        listIndex.append(index)
         index += 1
 
-    mylist = zip(list1)
+    pokemons = zip(list1)
     context = {
-        'mylist': mylist,
+        'pokemons': pokemons,
+        'i': listIndex
     }
     return render(request, "listPokemon.html", context)
