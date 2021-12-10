@@ -1,4 +1,4 @@
-Membre du groupe :
+Membre du groupe : <br>
 Rose DORLEANS : Front
 Nicolas VANDEPUTTE : Config de l'appel API:
 Hugo RADEPONT : Récupération nom et image + affichage / correction de bugs: 
