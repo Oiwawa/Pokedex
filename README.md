@@ -19,6 +19,6 @@ __ <br>
 Nous souhaitons nous excuser pour le projet que nous rendons. Plusieurs raisons expliquent le manque de contenu mais la raison principale reste le manque d'implication et de temps de notre part. <br>
 Rose s'est vu confié le front, qu'elle a très vite et bien réalisé de son côté. <br>
 Nicolas a fait le début de l'appel API. <br>
-J'ai (Hugo) modifié l'appel API pour pouvoir récupéerer le nom proprement et également l'image de chaque pokémon. <br>
+J'ai (Hugo) modifié l'appel API pour pouvoir récupérer le nom et l'image de chaque pokémon. Puis boucler dans le front pour l'affichage. <br>
 
 En espérant que vous apprecierez tout de même le rendu.
